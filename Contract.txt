@@ -1,0 +1,24 @@
+huom: fiktiivinen sopimus. ei liity millään tavalla oikeaan kone-kallioon
+
+Toimeksianto numerolle 21 (Nº 8): Kone-Kallio Oy
+Lähettäjä: Markku Kallio, Vuokrauspäällikkö
+Aihe: Konelista, joka toimii työmaalla
+
+Tervehdys.
+
+Kone-Kallio vuokraa rakennus- ja pihakoneita Kurikassa: minikaivureita, tärylevyjä, halkomakoneita ja niin edelleen. Toimitamme lähialueelle, tai asiakas hakee koneen pihastamme.
+
+Asiakkaamme ovat urakoitsijoita ja omakotiasujia, jotka haluavat vertailla koneita nopeasti: tyyppi, paino, päivähinta ja milloin kone on vapaana. Haluamme selkeän, pelkistetyn taulukon, mutta sen pitää toimia puhelimella työmaalla.
+
+Lisäksi vuokrauskyselylomake: mikä kone, mille päiville ja yhteystiedot. IT-kumppanimme yhdistää lomakkeen sähköpostiimme myöhemmin; nyt sen pitää huomata virheet ja kertoa selvästi, että kysely on valmis.
+
+Värit yönsininen, vaalea hiekka tekstinä ja meripihka korostuksena.
+
+Terveisin,
+
+— Markku Kallio
+
+Värit: Yötön yö
+- Teksti: #f5efe0
+- Tausta: #1e2b42
+- Korostus: #f2b544

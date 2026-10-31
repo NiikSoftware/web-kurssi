@@ -10,19 +10,19 @@
 <body>
     <!-- Normaalisti PHP hoitais kopioinnin mut ei varmaan (ainakaan vielä) saa käyttää-->
     <div class="navbar">
-        <a class="navbar_logo" href="./">Web-Kurssi</a>
+        <a class="navbar_logo" href="./"><img src="logo.png"></a>
         <a class="navbar_link" href="./listing.html">Listing</a>
         <a class="navbar_link floatright" href="./about.html">About</a>
-        <a class="navbar_link floatright" href="./contact.html">Contact</a>
+        <a class="navbar_link floatright disabled_link" href="./contact.html">Contact</a>
         <!-- Vain CSS nav menu mobiilille -->
         <!-- https://codeburst.io/how-to-make-a-collapsible-menu-using-only-css-a1cd805b1390 -->
         <input type="checkbox" id="navbar_mobile_expand">
-        <label for="navbar_mobile_expand">☰</label>
+        <label for="navbar_mobile_expand"></label>
         <div class="navbar_mobile_menu">
             <ul>
                 <li><a class="navbar_mobile_link" href="./listing.html">Listing</a></li>
                 <li><a class="navbar_mobile_link" href="./about.html">About</a></li>
-                <li><a class="navbar_mobile_link" href="./contact.html">Contact</a></li>
+                <li><a class="navbar_mobile_link disabled_link" href="./contact.html">Contact</a></li>
             </ul>
         </div>
     </div>

@@ -6,25 +6,252 @@
     <title>Web Kurssi Listing</title>
     <link rel="stylesheet" href="./main.css">
     <link rel="icon" type="image/x-icon" href="./favicon.png">
+    <style>
+        .list_main {
+            margin-top:100px;
+            width: 80%;
+            min-height: 100px;
+            margin-left:10%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .list_item {
+            width: 400px;
+            background-color: white;
+            border:1px solid #f2b544;
+            border-radius: 10px;
+            float:left;
+            margin: 10px;
+        }
+        .list_item img {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            cursor: pointer;
+        }
+        .list_item_name {
+            font-family: Arial;
+            font-weight: bold;
+            width: 90%;
+            margin:5px 0 5px 5%;
+        }
+        .list_item_info {
+            font-family: Arial;
+            color:gray;
+            display: inline-block;
+            width: 90%;
+            border-bottom: 1px solid gray;
+            margin: 2px 0 2px 5%;
+            padding: 0 2px 2px 2px;
+        }
+        .list_item_price {
+            font-family:Impact;
+            font-size: 22px;
+            color: #f2b544;
+            float:left;
+            line-height: 50px;
+        }
+        .list_item_price_perday {
+            font-size: 18px;
+            font-family: Arial;
+            color:#f5efe0;
+            float:left;
+            margin-top:2px;
+            margin-left: 5px;
+            line-height: 48px;
+        }
+        .list_item_footer {
+            width: 95%;
+            height: 50px;
+            background-color: #1e2b42;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            margin-top: 30px;
+            padding-left: 5%;
+        } 
+        .list_item_check_available {
+            float:right;
+            line-height: 50px;
+            cursor: pointer;
+            padding: 0 10px 0 10px;
+            background-color: #f2b544;
+            border-bottom-right-radius: 10px;
+            font-family: Arial;
+            font-weight: bold;
+        }
+        
+        @media only screen and (orientation:portrait) {
+            .list_main {
+                width: 95%;
+                margin-left: 2.5%;
+            }
+            .list_item {
+                width: 100%;
+                margin: 10px 0 10px 0;
+            }
+            .list_item img {
+                width: 100%;
+            }
+        }
+
+        .footer {
+            font-family: Arial;
+            width: 100%;
+            background-color: #1d1d1d;
+            margin-top: 100px;
+            color:#f5efe0;
+            padding: 10px 0 10px 0;
+            text-align: center;
+            border-top: 2px solid #f2b544;
+        }
+        
+    </style>
 </head>
 <body>
     <!-- Normaalisti PHP hoitais kopioinnin mut ei varmaan (ainakaan vielä) saa käyttää-->
     <div class="navbar">
-        <a class="navbar_logo" href="./">Web-Kurssi</a>
-        <a class="navbar_link" href="./listing.html">Listing</a>
+        <a class="navbar_logo" href="./"><img src="logo.png"></a>
+        <a class="navbar_link disabled_link" href="./listing.html">Listing</a>
         <a class="navbar_link floatright" href="./about.html">About</a>
         <a class="navbar_link floatright" href="./contact.html">Contact</a>
         <!-- Vain CSS nav menu mobiilille -->
         <!-- https://codeburst.io/how-to-make-a-collapsible-menu-using-only-css-a1cd805b1390 -->
         <input type="checkbox" id="navbar_mobile_expand">
-        <label for="navbar_mobile_expand">☰</label>
+        <label for="navbar_mobile_expand"></label>
         <div class="navbar_mobile_menu">
             <ul>
-                <li><a class="navbar_mobile_link" href="./listing.html">Listing</a></li>
+                <li><a class="navbar_mobile_link disabled_link" href="./listing.html">Listing</a></li>
                 <li><a class="navbar_mobile_link" href="./about.html">About</a></li>
                 <li><a class="navbar_mobile_link" href="./contact.html">Contact</a></li>
             </ul>
         </div>
+    </div>
+
+
+    <div class="list_main">
+        <div class="list_item" id="1793452544">
+            <img src="machines/1793452541.png">
+            <div class="list_item_name">WACKER NEUSON VP1135A</div>
+            <div class="list_item_info">
+                <div style="float: left;">Suurin tiivistys voima</div>
+                <div style="float: right;color: black;">11 kN</div>
+            </div>
+            <div class="list_item_info">
+                <div style="float: left;">Peruslaatan leveys</div>
+                <div style="float: right;color: black;">350 mm</div>
+            </div>
+            <div class="list_item_info">
+                <div style="float: left;">Mäennousukyky</div>
+                <div style="float: right;color: black;">36°</div>
+            </div>
+            <div class="list_item_footer">
+                <div class="list_item_price">26,21€</div>
+                <div class="list_item_price_perday">/Päivä</div>
+                <div class="list_item_check_available">Tarkista Saatavuus</div>
+            </div>
+        </div>
+        <div class="list_item" id="1793452547">
+            <img src="machines/1793452547.png">
+            <div class="list_item_name">Caivu HT20-1</div>
+            <div class="list_item_info">
+                <div style="float: left;">Kauhan tilavuus</div>
+                <div style="float: right;color: black;">0,04 m³</div>
+            </div>
+            <div class="list_item_info">
+                <div style="float: left;">Käyttöpaino</div>
+                <div style="float: right;color: black;">2000 kg</div>
+            </div>
+            <div class="list_item_info">
+                <div style="float: left;">Mäennousukyky</div>
+                <div style="float: right;color: black;">30°</div>
+            </div>
+            <div class="list_item_footer">
+                <div class="list_item_price">54,40€</div>
+                <div class="list_item_price_perday">/Päivä</div>
+                <div class="list_item_check_available">Tarkista Saatavuus</div>
+            </div>
+        </div>
+
+        <div class="list_item" id="1793452554">
+            <img src="machines/1793452554.png">
+            <div class="list_item_name">LEAN Toys 4838746</div>
+            <div class="list_item_info">
+                <div style="float: left;">Kauhan tilavuus</div>
+                <div style="float: right;color: black;">0,01 m³</div>
+            </div>
+            <div class="list_item_info">
+                <div style="float: left;">Käyttöpaino</div>
+                <div style="float: right;color: black;">50 kg</div>
+            </div>
+            <div class="list_item_info">
+                <div style="float: left;">Mäennousukyky</div>
+                <div style="float: right;color: black;">45°</div>
+            </div>
+            <div class="list_item_footer">
+                <div class="list_item_price">2,54€</div>
+                <div class="list_item_price_perday">/Päivä</div>
+                <div class="list_item_check_available">Tarkista Saatavuus</div>
+            </div>
+        </div>
+
+        <div class="list_item" id="17934525467">
+            <img src="machines/17934525467.png">
+            <div class="list_item_name">Timco halkomakone 8T 52cm</div>
+            <div class="list_item_info">
+                <div style="float: left;">Työntövoima</div>
+                <div style="float: right;color: black;">8000 kg</div>
+            </div>
+            <div class="list_item_info">
+                <div style="float: left;">Max puunpituus</div>
+                <div style="float: right;color: black;">52 cm</div>
+            </div>
+            <div class="list_item_info">
+                <div style="float: left;">Max. puunhalkaisija</div>
+                <div style="float: right;color: black;">300 mm</div>
+            </div>
+            <div class="list_item_footer">
+                <div class="list_item_price">30,95€</div>
+                <div class="list_item_price_perday">/Päivä</div>
+                <div class="list_item_check_available">Tarkista Saatavuus</div>
+            </div>
+        </div>
+
+        <div class="list_item" id="1793452576">
+            <img src="machines/1793452576.png">
+            <div class="list_item_name">AVANT 530</div>
+            <div class="list_item_info">
+                <div style="float: left;">Nostokyky</div>
+                <div style="float: right;color: black;">950 kg</div>
+            </div>
+            <div class="list_item_info">
+                <div style="float: left;">Nostokorkeus</div>
+                <div style="float: right;color: black;">2790 mm</div>
+            </div>
+            <div class="list_item_info">
+                <div style="float: left;">Kauhan tilavuus</div>
+                <div style="float: right;color: black;">0,015 m³</div>
+            </div>
+            <div class="list_item_footer">
+                <div class="list_item_price">41,52€</div>
+                <div class="list_item_price_perday">/Päivä</div>
+                <div class="list_item_check_available">Tarkista Saatavuus</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div>Kone-Kallio Oy</div>
+        <a target="_blank" style="color: #f2b544;" href="https://www.google.com/maps/place/Pee+Pee+Creek/@39.154898,-83.1310169,13484m">Kalliontie 67, 69420 Kurikka</a>
+        <div></div>
+        <br>
+        <div>Aukioloajat:</div>
+        <div>Ma-Pe: 7-16</div>
+        
+        <br>
+        <div>Website by
+            <a target="_blank" href="https://niiksoftware.com" style="color: #0082ff;">Niik Software</a> | 
+            <a target="_blank" href="PrivacyPolicy.html" style="color: #0082ff;">Privacy Policy</a></div>
     </div>
 
 </body>
