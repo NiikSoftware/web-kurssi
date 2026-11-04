@@ -3,8 +3,9 @@ body {
     background-color: #1e2b42;
 }
 
-.floatright {
-    float: right !important;
+@font-face {
+    font-family: Impact;
+    src: url("/web-kurssi/res/LuckiestGuy-Regular.ttf");
 }
 
 
@@ -37,7 +38,7 @@ body {
 }
 .disabled_link {
     pointer-events: none;
-    color: #f2b544 !important;
+    color: #f2b544;
 }
 
 .navbar_link:hover {
@@ -131,3 +132,7 @@ input#navbar_mobile_expand {
             text-align: center;
             border-top: 2px solid #f2b544;
         }
+        
+.floatright {
+    float: right;
+}
