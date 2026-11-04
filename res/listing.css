@@ -1,0 +1,107 @@
+.list_main {
+    margin-top: 100px;
+    width: 80%;
+    min-height: 100px;
+    margin-left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.list_item {
+    width: 400px;
+    background-color: white;
+    border: 1px solid #f2b544;
+    border-radius: 10px;
+    float: left;
+    margin: 10px;
+}
+
+.list_item img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+}
+
+.list_item_name {
+    font-family: Arial;
+    font-weight: bold;
+    width: 90%;
+    margin: 5px 0 5px 5%;
+}
+
+.list_item_info {
+    font-family: Arial;
+    color: gray;
+    display: inline-block;
+    width: 90%;
+    border-bottom: 1px solid gray;
+    margin: 2px 0 2px 5%;
+    padding: 0 2px 2px 2px;
+}
+
+.list_item_price {
+    font-family: Impact;
+    font-size: 22px;
+    color: #f2b544;
+    float: left;
+    line-height: 50px;
+}
+
+.list_item_price_perday {
+    font-size: 18px;
+    font-family: Arial;
+    color: #f5efe0;
+    float: left;
+    margin-top: 2px;
+    margin-left: 5px;
+    line-height: 48px;
+}
+
+.list_item_footer {
+    width: 95%;
+    height: 50px;
+    background-color: #1e2b42;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: 30px;
+    padding-left: 5%;
+}
+
+.list_item_check_available {
+    float: right;
+    line-height: 50px;
+    cursor: pointer;
+    padding: 0 10px 0 10px;
+    background-color: #f2b544;
+    border-bottom-right-radius: 10px;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+@media only screen and (orientation:portrait) {
+    .list_main {
+        width: 95%;
+        margin-left: 2.5%;
+    }
+
+    .list_item {
+        width: 100%;
+        margin: 10px 0 10px 0;
+    }
+
+    .list_item img {
+        width: 100%;
+    }
+}
+
+.footer {
+    font-family: Arial;
+    width: 100%;
+    background-color: #1d1d1d;
+    margin-top: 100px;
+    color: #f5efe0;
+    padding: 10px 0 10px 0;
+    text-align: center;
+    border-top: 2px solid #f2b544;
+}
