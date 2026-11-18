@@ -1,0 +1,202 @@
+body {
+    margin:0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header {
+    position:fixed;
+    height:75px;
+    width: 100%;
+    background-color: #1e2b42;
+    display:flex;
+    border-bottom: 2px solid #f2b544;
+}
+nav {
+    display:flex;
+    flex:1;
+}
+nav a {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+    color: #f5efe0;
+    line-height: 75px;
+    padding: 0 10px 0 10px;
+}
+nav a:hover {
+    color: #f2b544;
+}
+header label {
+    background: url(navbar_expand.png) no-repeat left center;
+    height: 75px;
+    width: 75px;
+    display: none;
+    margin-left:auto;
+}
+input:checked ~ label {
+    background-image: url(navbar_shrink.png);
+}
+
+input:checked ~ nav {
+    max-height: 150px;
+}
+
+
+#nav_mobile_expand {
+    display:none;
+}
+
+main {
+    margin-top:75px;
+    flex: 1;
+    padding:20px;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+footer {
+    font-family: Arial;
+    width: 100%;
+    background-color: #1d1d1d;
+    color:#f5efe0;
+    padding: 10px 0 10px 0;
+    text-align: center;
+    border-top: 2px solid #f2b544;
+}
+
+.disabled_link {
+    pointer-events: none;
+    cursor:default;
+    color: #f2b544;
+}
+
+
+.list_main {
+    margin-top: 100px;
+    width: 80%;
+    min-height: 100px;
+    margin-left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.list_item {
+    width: 400px;
+    background-color: white;
+    border: 1px solid #f2b544;
+    border-radius: 10px;
+    float: left;
+    margin: 10px;
+}
+
+.list_item img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+}
+
+.list_item_name {
+    font-family: Arial;
+    font-weight: bold;
+    width: 90%;
+    margin: 5px 0 5px 5%;
+}
+
+.list_item_info {
+    font-family: Arial;
+    color: gray;
+    display: inline-block;
+    width: 90%;
+    border-bottom: 1px solid gray;
+    margin: 2px 0 2px 5%;
+    padding: 0 2px 2px 2px;
+}
+
+.list_item_price {
+    font-family: Impact;
+    font-size: 22px;
+    color: #f2b544;
+    float: left;
+    line-height: 50px;
+}
+
+.list_item_price_perday {
+    font-size: 18px;
+    font-family: Arial;
+    color: #f5efe0;
+    float: left;
+    margin-top: 2px;
+    margin-left: 5px;
+    line-height: 48px;
+}
+
+.list_item_footer {
+    width: 95%;
+    height: 50px;
+    background-color: #1e2b42;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: 30px;
+    padding-left: 5%;
+}
+
+.list_item_check_available {
+    float: right;
+    line-height: 50px;
+    cursor: pointer;
+    padding: 0 10px 0 10px;
+    background-color: #f2b544;
+    border-bottom-right-radius: 10px;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+@media only screen and (orientation:portrait) {
+    nav {
+        position: fixed;
+        background:#323f53;
+        top: 75px;
+        left: 0px;
+        width: 100%;
+        text-align: center;
+        max-height: 0;
+        overflow: hidden;
+        border-bottom: 2px solid #f2b544;
+        transition: max-height 0.2s ease-out;
+        flex-direction: column;
+    }
+    nav a{
+        height:50px;
+        line-height: 50px;
+    }
+    
+    header label {
+        display: block;
+    }
+    .list_main {
+        width: 95%;
+        margin-left: 2.5%;
+    }
+
+    .list_item {
+        width: 100%;
+        margin: 10px 0 10px 0;
+    }
+
+    .list_item img {
+        width: 100%;
+    }
+}

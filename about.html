@@ -1,16 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kone-Kallio Oy</title>
+
+    <link rel="stylesheet" href="/web-kurssi/style.css">
+
 </head>
 <body>
-    <ul>
-        <li><a href="./">Kone-Kallio Oy</a></li>
-        <li><a href="./listing.html">Listing</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-        <li><a href="./about.html">About</a></li>
-    </ul>
+    <header>
+        <a href="/web-kurssi/"><img style="padding:5px;" src="logo.png"></a>
+        <input type="checkbox" id="nav_mobile_expand">
+        <label for="nav_mobile_expand"></label>
+        <nav>
+            <a href="/web-kurssi/listing.html">Listing</a>
+            <a style="margin-left:auto"></a> <!-- Makes stuff float on the left -->
+            <a href="/web-kurssi/contact.html">Contact</a>
+            <a href="/web-kurssi/about.html" class="disabled_link">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Meistä</h1>
+        <p>Kone-Kallio Oy on Kurikassa toimiva, perheeseen kuuluva konevuokrausyritys. Tarjoamme luotettavia työkoneita rakentajille, maanrakentajille, yrittäjille ja kotitonttien tekijöille.</p>
+
+        <h2>Vastuullinen kumppani</h2>
+        <p>Yrityksen omistajana ja perustajana toimii Markku Kallio. Hänen tärkein tavoitteensa on, että asiakas saa juuri oikean koneen ja tarvitsemansa tuen työn sujuvaan suorittamiseen.</p>
+
+
+        <h2>Huolellisesti kunnossa pidetty kalusto</h2>
+        <p>Koneemme huolletaan säännöllisesti, jotta ne ovat turvallisia, tehokkaita ja käyttövalmiita. Vuokraamme kalustoa sekä lyhyille että pidemmille työurakoille.</p>
+
+        <p>Olemme ylpeitä Kurikanjuuristamme ja haluamme olla alueemme luotettava työkoneiden vuokraus- ja palvelukumppani.</p>
+
+        <img style="border: 2px solid #f2b544;" src="markku.png" alt="Markku Kallio, yrityksen omistaja">
+        <p style="font-style: italic; font-weight: bold; color: #555;">Markku Kallio, Kone-Kallio Oy:n perustaja ja omistaja</p>
+
+    </main>
+
+    <footer>
+        <div>Kone-Kallio Oy</div>
+        <a target="_blank" style="color: #f2b544;" href="https://www.google.com/maps/place/Pee+Pee+Creek/@39.154898,-83.1310169,13484m">Konetie 2, 61300 Kurikka</a>
+        <div></div>
+        <br>
+        <div>Aukioloajat:</div>
+        <div>Ma-Pe: 7-17</div>
+        
+        <br>
+        <div>Website by
+            <a target="_blank" href="https://niiksoftware.com" style="color: #0082ff;">Niik Software</a> | 
+            <a target="_blank" href="PrivacyPolicy.html" style="color: #0082ff;">Privacy Policy</a></div>
+    </footer>
+
 </body>
 </html>

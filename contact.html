@@ -1,16 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kone-Kallio Oy</title>
+
+    <link rel="stylesheet" href="/web-kurssi/style.css">
+    <style>
+        label {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .contact-form {
+            border:2px solid #f2b544;
+            padding: 10px;
+            display: block;
+        }
+        .contact-form input {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .contact-form textarea {
+            display: block;
+        }
+        #message {
+            width: 100%;
+            height: 200px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            resize: none;
+        }
+    </style>
+
 </head>
 <body>
-    <ul>
-        <li><a href="./">Kone-Kallio Oy</a></li>
-        <li><a href="./listing.html">Listing</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-        <li><a href="./about.html">About</a></li>
-    </ul>
+    <header>
+        <a href="/web-kurssi/"><img style="padding:5px;" src="logo.png"></a>
+        <input type="checkbox" id="nav_mobile_expand">
+        <label for="nav_mobile_expand"></label>
+        <nav>
+            <a href="/web-kurssi/listing.html">Listing</a>
+            <a style="margin-left:auto"></a> <!-- Makes stuff float on the left -->
+            <a href="/web-kurssi/contact.html" class="disabled_link">Contact</a>
+            <a href="/web-kurssi/about.html">About</a>
+        </nav>
+    </header>
+        
+    
+
+    <main>
+        <h1>Ota yhteyttä</h1>
+        <p>Jätäthän yhteydenottopyyntösi alla olevaan lomakkeeseen. Otamme sinuun yhteyttä mahdollisimman pian.</p>
+
+        <form class="contact-form" action="#" method="post">
+            <label for="name">Nimi</label>
+            <input type="text" autocomplete="name" id="name" name="name" required>
+
+            <label for="email">Sähköposti</label>
+            <input type="email" autocomplete="email" id="email" name="email" required>
+
+            <label for="phone">Puhelinnumero (Vapaaehtoinen)</label>
+            <input type="tel" autocomplete="tel" id="phone" name="phone">
+
+            <label for="message">Viesti</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Lähetä viesti</button>
+        </form>
+
+    </main>
+
+
+    <footer>
+        <div>Kone-Kallio Oy</div>
+        <a target="_blank" style="color: #f2b544;" href="https://www.google.com/maps/place/Pee+Pee+Creek/@39.154898,-83.1310169,13484m">Konetie 2, 61300 Kurikka</a>
+        <div></div>
+        <br>
+        <div>Aukioloajat:</div>
+        <div>Ma-Pe: 7-17</div>
+        
+        <br>
+        <div>Website by
+            <a target="_blank" href="https://niiksoftware.com" style="color: #0082ff;">Niik Software</a> | 
+            <a target="_blank" href="PrivacyPolicy.html" style="color: #0082ff;">Privacy Policy</a></div>
+    </footer>
+
 </body>
 </html>
