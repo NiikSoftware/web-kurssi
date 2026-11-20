@@ -84,7 +84,6 @@ footer {
 
 
 .list_main {
-    margin-top: 100px;
     width: 80%;
     min-height: 100px;
     margin-left: 10%;
@@ -154,6 +153,7 @@ footer {
 }
 
 .list_item_check_available {
+    color:#1e2b42;
     float: right;
     line-height: 50px;
     cursor: pointer;
@@ -168,6 +168,7 @@ footer {
     border:2px solid #f2b544;
     padding: 10px;
     display: block;
+    max-width: 800px;
 }
 .contact-form label {
     font-family: Arial, Helvetica, sans-serif;
@@ -223,3 +224,26 @@ footer {
         width: 100%;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1e2b42;
+        color: #f5efe0;
+    }
+
+    .list_item_name {
+        color: black;
+    }
+
+    .contact-form {
+        background-color: #1e2b42;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        background-color: #121820;
+        color: #f5efe0;
+        border: 1px solid #697586;
+    }
+}
+
