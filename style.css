@@ -28,14 +28,17 @@ nav a:hover {
     color: #f2b544;
 }
 header label {
-    background: url(navbar_expand.png) no-repeat left center;
+    background: url(res/navbar_expand.png) no-repeat left center;
     height: 75px;
     width: 75px;
     display: none;
     margin-left:auto;
 }
+header a img{
+    padding:5px;
+}
 input:checked ~ label {
-    background-image: url(navbar_shrink.png);
+    background-image: url(res/navbar_shrink.png);
 }
 
 input:checked ~ nav {
@@ -82,9 +85,26 @@ footer {
     color: #f2b544;
 }
 
+#load_icon {
+    display: block;
+    margin: 100px auto;
+    animation: load_icon_spin 1s linear infinite;
+}
 
-.list_main {
+@keyframes load_icon_spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #load_icon {
+        display: none;
+    }
+}
+
+#list_main {
     width: 80%;
+    min-width: 275px;
     min-height: 100px;
     margin-left: 10%;
     display: flex;
@@ -93,6 +113,7 @@ footer {
 }
 
 .list_item {
+    font-family: Arial;
     width: 400px;
     background-color: white;
     border: 1px solid #f2b544;
@@ -105,23 +126,23 @@ footer {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     cursor: pointer;
+    border-bottom:1px solid #f2b544;
 }
 
 .list_item_name {
-    font-family: Arial;
     font-weight: bold;
     width: 90%;
     margin: 5px 0 5px 5%;
 }
 
 .list_item_info {
-    font-family: Arial;
     color: gray;
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
     width: 90%;
     border-bottom: 1px solid gray;
-    margin: 2px 0 2px 5%;
-    padding: 0 2px 2px 2px;
+    margin-left: 5%;
+    padding: 4px 0 4px 0;
 }
 
 .list_item_price {
@@ -188,6 +209,47 @@ footer {
     resize: none;
 }
 
+.nav_divider {
+    margin-left:auto;
+}
+.about_img_markku {
+    border: 2px solid #f2b544;
+}
+.about_p_markku {
+    font-style: italic;
+    font-weight: bold; 
+}
+.address_link {
+    color: #f2b544;
+}
+.niik_link {
+    color: #0082ff;
+}
+.hidden {
+    display: none !important;
+}
+
+#listing_retry {
+    margin-top:50px;
+    text-align: center;
+}
+#listing_retry p:first-child {
+    font-size: 36px;
+    font-weight: bold;
+    margin:0;
+}
+#listing_retry button {
+    width: 200px;
+    height: 50px;
+    background-color: #f2b544;
+    border:none;
+    cursor: pointer;
+}
+#listing_retry button:hover {
+    background-color: #bd8d34;
+
+}
+
 @media only screen and (orientation:portrait) {
     nav {
         position: fixed;
@@ -210,7 +272,7 @@ footer {
     header label {
         display: block;
     }
-    .list_main {
+    #list_main {
         width: 95%;
         margin-left: 2.5%;
     }
