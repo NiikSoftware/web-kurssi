@@ -1,31 +1,49 @@
+:root {
+    --color-main: #1e2b42;
+    --color-text: #f5efe0;
+    --color-accent: #f2b544;
+
+    --font-nav:'Franklin Gothic Medium', Arial, sans-serif;
+    --font-text: Arial, Helvetica, sans-serif;
+    --font-footer: Arial;
+
+    --font-list: Arial;
+    --font-price:Impact;
+
+    --font-contact:Arial;
+  
+}
+
+
 body {
     margin:0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: var(--font-text);
 }
 header {
     position:fixed;
     height:75px;
     width: 100%;
-    background-color: #1e2b42;
+    background-color: var(--color-main);
     display:flex;
-    border-bottom: 2px solid #f2b544;
+    border-bottom: 2px solid var(--color-accent);
 }
 nav {
     display:flex;
     flex:1;
 }
 nav a {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:var(--font-nav);
     font-size: 24px;
     text-decoration: none;
-    color: #f5efe0;
+    color: var(--color-text);
     line-height: 75px;
     padding: 0 10px 0 10px;
 }
 nav a:hover {
-    color: #f2b544;
+    color: var(--color-accent);
 }
 header label {
     background: url(res/navbar_expand.png) no-repeat left center;
@@ -56,33 +74,21 @@ main {
     padding:20px;
 }
 
-h1 {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-h2 {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-p {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 
 footer {
-    font-family: Arial;
+    font-family: var(--font-footer);
     width: 100%;
     background-color: #1d1d1d;
-    color:#f5efe0;
+    color:var(--color-text);
     padding: 10px 0 10px 0;
     text-align: center;
-    border-top: 2px solid #f2b544;
+    border-top: 2px solid var(--color-accent);
 }
 
 .disabled_link {
     pointer-events: none;
     cursor:default;
-    color: #f2b544;
+    color: var(--color-accent);
 }
 
 #load_icon {
@@ -113,10 +119,10 @@ footer {
 }
 
 .list_item {
-    font-family: Arial;
+    font-family: var(--font-list);
     width: 400px;
     background-color: white;
-    border: 1px solid #f2b544;
+    border: 1px solid var(--color-accent);
     border-radius: 10px;
     float: left;
     margin: 10px;
@@ -126,7 +132,13 @@ footer {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     cursor: pointer;
-    border-bottom:1px solid #f2b544;
+    border-bottom:1px solid var(--color-accent);
+    width: 400px;
+}
+
+.list_item img:focus-visible {
+    outline: 3px solid var(--color-main);
+    outline-offset: -3px;
 }
 
 .list_item_name {
@@ -136,7 +148,7 @@ footer {
 }
 
 .list_item_info {
-    color: gray;
+    color: #595959;
     display: flex;
     justify-content: space-between;
     width: 90%;
@@ -144,19 +156,20 @@ footer {
     margin-left: 5%;
     padding: 4px 0 4px 0;
 }
+.list_item_info > div:last-child {
+    color: black;
+}
 
 .list_item_price {
-    font-family: Impact;
+    font-family: var(--font-price);
     font-size: 22px;
-    color: #f2b544;
+    color: var(--color-accent);
     float: left;
     line-height: 50px;
 }
 
 .list_item_price_perday {
     font-size: 18px;
-    font-family: Arial;
-    color: #f5efe0;
     float: left;
     margin-top: 2px;
     margin-left: 5px;
@@ -166,7 +179,7 @@ footer {
 .list_item_footer {
     width: 95%;
     height: 50px;
-    background-color: #1e2b42;
+    background-color: var(--color-main);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     margin-top: 30px;
@@ -174,25 +187,22 @@ footer {
 }
 
 .list_item_check_available {
-    color:#1e2b42;
+    color:var(--color-main);
     float: right;
     line-height: 50px;
     cursor: pointer;
     padding: 0 10px 0 10px;
-    background-color: #f2b544;
+    background-color: var(--color-accent);
     border-bottom-right-radius: 10px;
-    font-family: Arial;
     font-weight: bold;
 }
 
 .contact-form {
-    border:2px solid #f2b544;
+    font-family: var(--font-contact);
+    border:2px solid var(--color-accent);
     padding: 10px;
     display: block;
     max-width: 800px;
-}
-.contact-form label {
-    font-family: Arial, Helvetica, sans-serif;
 }
 .contact-form input {
     display: block;
@@ -213,14 +223,14 @@ footer {
     margin-left:auto;
 }
 .about_img_markku {
-    border: 2px solid #f2b544;
+    border: 2px solid var(--color-accent);
 }
 .about_p_markku {
     font-style: italic;
     font-weight: bold; 
 }
 .address_link {
-    color: #f2b544;
+    color: var(--color-accent);
 }
 .niik_link {
     color: #0082ff;
@@ -241,13 +251,35 @@ footer {
 #listing_retry button {
     width: 200px;
     height: 50px;
-    background-color: #f2b544;
+    background-color: var(--color-accent);
     border:none;
     cursor: pointer;
 }
 #listing_retry button:hover {
     background-color: #bd8d34;
 
+}
+
+#image_viewer {
+    width: fit-content;
+    height: fit-content;
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 10px;
+    color: var(--color-text);
+}
+
+#image_viewer::backdrop {
+    background: rgb(0 0 0 / 80%);
+}
+
+#image_viewer_image {
+    display: block;
+    border-radius: 10px;
+    max-width: calc(90vw - 18px);
+    max-height: calc(90vh - 18px);
+    object-fit: contain;
+    cursor: pointer;
 }
 
 @media only screen and (orientation:portrait) {
@@ -260,7 +292,7 @@ footer {
         text-align: center;
         max-height: 0;
         overflow: hidden;
-        border-bottom: 2px solid #f2b544;
+        border-bottom: 2px solid var(--color-accent);
         transition: max-height 0.2s ease-out;
         flex-direction: column;
     }
@@ -289,8 +321,8 @@ footer {
 
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: #1e2b42;
-        color: #f5efe0;
+        background-color: var(--color-main);
+        color: var(--color-text);
     }
 
     .list_item_name {
@@ -298,13 +330,13 @@ footer {
     }
 
     .contact-form {
-        background-color: #1e2b42;
+        background-color: var(--color-main);
     }
 
     .contact-form input,
     .contact-form textarea {
         background-color: #121820;
-        color: #f5efe0;
+        color: var(--color-text);
         border: 1px solid #697586;
     }
 }

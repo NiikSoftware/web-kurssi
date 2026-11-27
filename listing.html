@@ -34,7 +34,7 @@
         <div id="listing_retry" class="hidden">
             <p>We're busy right now</p>
             <p>Please Wait...</p>
-            <button onclick="getMachines()">Retry</button>
+            <button id="retry_machines">Retry</button>
         </div>
         
 
@@ -46,7 +46,30 @@
 
     </main>
 
+    <dialog id="image_viewer" aria-label="Image viewer">
+        <img id="image_viewer_image" alt="">
+    </dialog>
+
     <script>
+        // huhhuh koko imageviewer on tehty tekoälyllä (ja sitten "korjattu" et mä ite ymmärrän siitä jotain) :D
+        const imageViewer = document.getElementById("image_viewer");
+        const imageViewerImage = document.getElementById("image_viewer_image");
+
+        function openImageViewer(image) {
+            imageViewerImage.src = image.src;
+            imageViewerImage.alt = image.alt;
+            imageViewer.showModal();
+        }
+
+        imageViewerImage.addEventListener("click", () => imageViewer.close());
+        imageViewer.addEventListener("click", event => {
+            if (event.target === imageViewer) {
+                imageViewer.close();
+            }
+        });
+
+        document.getElementById("retry_machines").addEventListener("click", getMachines);
+
         async function getMachines() {
             document.getElementById("load_icon").className=""
             document.getElementById("listing_retry").className="hidden"
@@ -95,7 +118,9 @@
                             this.src = "machines/placeholder.jpg";
                         };
                     }));
-                    _el.src="machines/"+el["id"]+".png"
+                    _el.src="machines/"+el["id"]+".jpg"
+                    const machineImage = _el;
+                    machineImage.addEventListener("click", () => openImageViewer(machineImage));
                     _obj.appendChild(_el)
 
                     // <div class="list_item_name">NAME</div>
@@ -126,12 +151,11 @@
 
                     // <div>Weight</div>
                     _el2=document.createElement("div")
-                    _el2.textContent="Weight"
+                    _el2.textContent="Paino"
                     _el.appendChild(_el2)
 
                     // <div>WEIGHT Kg</div>
                     _el2=document.createElement("div")
-                    //_el2.style="color:black"
                     _el2.textContent=el["weight_kg"]+" Kg"
                     _el.appendChild(_el2)
                     _obj.appendChild(_el)
